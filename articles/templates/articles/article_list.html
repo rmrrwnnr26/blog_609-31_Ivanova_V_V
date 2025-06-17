@@ -2,7 +2,9 @@
 {% block title %}Article list{% endblock title %}
 {% block content %}
     <main>
-        <h1>Article list</h1>
+        <div class="main">
+            <h1>Article list</h1>
+        </div>
         <div class="articles">
             {% for element in articles %}
                 <div class="article__item">
@@ -21,7 +23,9 @@
             {% endfor %}
         </div>
         {% if user.is_authenticated %}
-        <a href="{% url 'articles:create' %}">Create article</a>
+        <div class="button-create_article">
+            <a href="{% url 'articles:create' %}">Create article</a>
+        </div>
         {% endif %}
     </main>
 {% endblock content %}

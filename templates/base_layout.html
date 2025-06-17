@@ -18,24 +18,23 @@
                     <li><a href="{% url 'articles:article' %}">Articles</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
                 </ul>
-                <ul>
+                <ul class="button_login">
                     {% if user.is_authenticated %}
                     <li>
                         <form class="form" action="{% url 'accounts:logout' %}" method="post">
                             {% csrf_token %}
-                            <button type="submit">Logout</button>
+                            <button class="button_logout" type="submit">Logout</button>
                         </form>
                     </li>
                     {% else %}
-                        <li>
-                            <a href="{% url 'accounts:login' %}">Login</a>
-                        </li>
+                    <li>
+                        <a href="{% url 'accounts:login' %}">Login</a>
+                    </li>
                     {% endif %}
                 </ul>
             </nav>
         </div>
     </header>
-
     {% block content %}{% endblock content %}
 </body>
 </html>
