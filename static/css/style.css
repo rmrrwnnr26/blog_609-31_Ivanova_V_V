@@ -146,3 +146,8 @@ h1 {
     margin: 26.8px 228.667px;
 }
 /*конец стилей для статей*/
+
+.form {
+    color: black;
+    margin: auto;
+}
