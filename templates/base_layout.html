@@ -15,20 +15,20 @@
             <nav class="navbar">
                 <ul class="nav-links">
                     <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'article' %}">Articles</a></li>
+                    <li><a href="{% url 'articles:article' %}">Articles</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
                 </ul>
                 <ul>
                     {% if user.is_authenticated %}
                     <li>
-                        <form class="form" action="/accounts/logout/" method="post">
+                        <form class="form" action="{% url 'accounts:logout' %}" method="post">
                             {% csrf_token %}
                             <button type="submit">Logout</button>
                         </form>
                     </li>
                     {% else %}
                         <li>
-                            <a href="{% url 'login' %}">Login</a>
+                            <a href="{% url 'accounts:login' %}">Login</a>
                         </li>
                     {% endif %}
                 </ul>
