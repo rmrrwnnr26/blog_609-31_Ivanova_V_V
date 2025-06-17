@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Default title{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="{% url 'home' %}">MySite</a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'article' %}">Articles</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                </ul>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <form class="form" action="/accounts/logout/" method="post">
+                            {% csrf_token %}
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
+                    {% else %}
+                        <li>
+                            <a href="{% url 'login' %}">Login</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    {% block content %}{% endblock content %}
+</body>
+</html>
