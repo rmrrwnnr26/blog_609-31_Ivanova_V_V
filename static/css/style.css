@@ -92,7 +92,7 @@ h1 {
 
 /*стили для раздела "Homepage"*/
 .homepage {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -108,8 +108,29 @@ h1 {
 
 /*стили для раздела "About"*/
 .about {
-    margin-top: 50px;
+    margin: 30px auto 30px;
     text-align: center;
+}
+
+.about_body {
+    margin: 30px 228.667px;
+    text-align: justify;
+}
+
+.about_body h3{
+    text-align: center;
+    font-size: x-large;
+    margin: 30px auto;
+}
+
+.about_body p1{
+    text-align: justify;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.list {
+    font-size: 20px;
 }
 
 .about p {
@@ -129,7 +150,7 @@ h1 {
     grid-template-columns: repeat(3, minmax(320px, 360px));
     gap: 20px;
     max-width: 800px;
-    margin: 50px auto 50px;
+    margin: 30px auto 30px;
 }
 
 .article__item {
