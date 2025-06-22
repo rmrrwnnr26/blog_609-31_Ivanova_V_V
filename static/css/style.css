@@ -174,12 +174,15 @@ h1 {
 }
 
 .button-create_article a{
+    color: black;
     text-decoration: none;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
     padding: 10px 20px;
 }
+
+
 /*конец стилей для раздела "Articles"*/
 
 
@@ -260,3 +263,23 @@ h1 {
     padding: 10px 20px;
 }
 /*конец стилей для страницы SIGNUP*/
+
+/*стили для Create article*/
+.form {
+    text-align: center;
+}
+
+.create_article{
+    background-color: #B19FCC;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    margin: 20px auto ;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 20px;
+}
+/*конец стилей для Create article*/

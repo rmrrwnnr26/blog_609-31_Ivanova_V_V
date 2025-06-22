@@ -24,7 +24,7 @@ def login_view(request):
             print(request.POST)
             if 'next' in request.POST:
                 return redirect(request.POST['next'])
-            return redirect('articles:article')
+            return redirect('homepage')
     else:
         print(request.GET)
         form = AuthenticationForm()

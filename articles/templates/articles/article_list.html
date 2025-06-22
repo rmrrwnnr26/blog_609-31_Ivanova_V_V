@@ -24,7 +24,7 @@
         </div>
         {% if user.is_authenticated %}
         <div class="button-create_article">
-            <a href="{% url 'articles:create' %}">Create article</a>
+            <a class="button-create_text" href="{% url 'articles:create' %}">Create article</a>
         </div>
         {% endif %}
     </main>
