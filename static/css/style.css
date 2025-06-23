@@ -1,5 +1,18 @@
 /*общие стили для всех разделов*/
 /*стили для header*/
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main {
+    margin-top: 130px;
+}
+
 .header {
     background-color: #B19FCC;
     position: fixed;
@@ -52,9 +65,7 @@
 
 .button_login{
     list-style-type: none;
-    background-color: #ffffff;
     text-align: center;
-    width: 60px;
     height: 20px;
     margin: auto 0 0 20px;
     border-radius: 20px;
@@ -62,6 +73,12 @@
     display: inline-block;
     vertical-align: middle;
     padding: 10px 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+
 }
 /*конец стилей для header*/
 
@@ -113,7 +130,7 @@ h1 {
 }
 
 .about_body {
-    margin: 30px 228.667px;
+    margin: 30px 20px;
     text-align: justify;
 }
 
@@ -138,7 +155,7 @@ h1 {
     font-size: 20px;
     max-width: 1440px;
     text-align: justify;
-    margin: 26.8px 228.667px;
+    margin: 30px 20px;
 }
 /*конец стилей для раздела "About"*/
 
@@ -209,8 +226,42 @@ h1 {
 }
 /*конец стилей для статей*/
 
+/* Медиа-запрос для мобильных устройств */
+@media screen and (max-width: 767px) {
+    .articles {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    /* Убираем боковые отступы для контента на очень маленьких экранах */
+    body {
+        padding: 0 10px;
+    }
+}
+
+/* Медиа-запрос для планшетов (если нужно) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 /*стили для страницы LOGIN*/
+.form input {
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    height: 30px;
+    border-radius: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+
+}
+
+.form div {
+    flex-direction: column;
+}
+
 .form_login h1{
     margin-bottom: 50px;
 }
@@ -231,6 +282,17 @@ h1 {
     vertical-align: middle;
     padding: 10px 20px;
 }
+
+.btn {
+background-color: #B19FCC;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    border-radius: 20px;
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 10px 20px;}
 
 .button_create {
     text-align: center;
@@ -283,3 +345,59 @@ h1 {
     padding: 10px 20px;
 }
 /*конец стилей для Create article*/
+
+
+/*Адаптив*/
+
+@media (max-width: 510px) {
+    li {
+        padding-left: 0;
+    }
+
+    .navbar li a{
+        font-size: 14px;
+    }
+.logo {
+    font-size: 23px;
+}
+
+}
+
+@media (max-width: 450px) {
+    .about p {
+    font-size: 18px;
+    }
+
+    li {
+        font-size: 18px;
+    }
+
+    .about_body p1 {
+        font-size: 18px;
+    }
+
+    .form input {
+    width: 300px;
+}
+
+.logo{
+    float: none;
+    text-align: center;
+}
+
+.navbar {
+    float: none;
+    margin: 0 auto;
+}
+}
+
+@media (max-width: 390px) {
+    .button_login {
+    margin: 0;
+    gap: 15px;
+}
+
+    .nav-links{
+        padding: 0;
+    }
+}
